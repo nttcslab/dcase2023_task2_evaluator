@@ -26,72 +26,72 @@ Clone this repository from Github.
 - Move the directory into `./teams/`
 
 ### 3. Check directory structure
-- ./dcase2023_task2_evaluator
-    - /dcase2023_task2_evaluator.py
-    - /03_evaluation_eval_data.sh
-    - /ground_truth_attributes
-        - ground_truth_bandsaw_section_00_test.csv
-        - ground_truth_grinder_section_00_test.csv
+- ./dcase2023\_task2\_evaluator
+    - /dcase2023\_task2\_evaluator.py
+    - /03\_evaluation\_eval\_data.sh
+    - /ground\_truth\_attributes
+        - ground\_truth\_bandsaw\_section\_00\_test.csv
+        - ground\_truth\_grinder\_section\_00\_test.csv
         - ...
-    - /ground_truth_data
-        - ground_truth_bandsaw_section_00_test.csv
-        - ground_truth_grinder_section_00_test.csv
+    - /ground\_truth\_data
+        - ground\_truth\_bandsaw\_section\_00\_test.csv
+        - ground\_truth\_grinder\section\_00\_test.csv
         - ...
-    - /ground_truth_domain
-        - ground_truth_bandsaw_section_00_test.csv
-        - ground_truth_grinder_section_00_test.csv
+    - /ground\_truth\_domain
+        - ground\_truth\_bandsaw\_section\_00\_test.csv
+        - ground\_truth\_grinder\_section\_00\_test.csv
         - ...
-    - /<teams>
-        - /<team_name_1>
-            - /<system_name_1>
-                - anomaly_score_bandsaw_section_00_test.csv
-                - anomaly_score_grinder_section_00_test.csv
+    - /teams
+        - /\<team\_name\_1\>
+            - /\<system\_name\_1\>
+                - anomaly\_score\_bandsaw\_section\_00\_test.csv
+                - anomaly\_score\_grinder\_section\_00\_test.csv
+                - ...
+                - decision\_result\_ToyTank\_section\_00\_test.csv
+                - decision\_result\_Vacuum\_section\_00\_test.csv
+            - /\<system\_name\_2\>
+                - anomaly\_score\_DCASE2023T2bandsaw\_section\_00\_test\_seed\<--seed\>\<--tag\>\_Eval.csv
+                - anomaly\_score\_DCASE2023T2grinder\_section\_00\_test\_seed\<--seed\>\<--tag\>\_Eval.csv
+                - ...
+                - decision\_result\_DCASE2023T2ToyTank\_section\_00\_test\_seed\<--seed\>\<--tag\>\_Eval.csv
+                - decision\_result\_DCASE2023T2Vacuum\_section\_00\_test\_seed\<--seed\>\<--tag\>\_Eval.csv
+        - /\<team\_name\_2\>
+            - /\<system\_name\_3\>
+                - anomaly\_score\_bandsaw\_section\_00\_test.csv
+                - anomaly\_score\_grinder\_section\_00\test.csv
                 - ...
                 - decision_result_ToyTank_section_00_test.csv
                 - decision_result_Vacuum_section_00_test.csv
-            - /<system_name_2>
-                - anomaly_score_DCASE2023T2bandsaw_section_00_test_seed<--seed><--tag>_Eval.csv
-                - anomaly_score_DCASE2023T2grinder_section_00_test_seed<--seed><--tag>_Eval.csv
-                - ...
-                - decision_result_DCASE2023T2ToyTank_section_00_test_seed<--seed><--tag>_Eval.csv
-                - decision_result_DCASE2023T2Vacuum_section_00_test_seed<--seed><--tag>_Eval.csv
-        - /<team_name_2>
-            - /<system_name_3>
-                - anomaly_score_bandsaw_section_00_test.csv
-                - anomaly_score_grinder_section_00_test.csv
-                - ...
-                - decision_result_ToyTank_section_00_test.csv
-                - decision_result_Vacuum_section_00_test.csv
         - ...
-    - /<teams>_result
-        - <system_name_1>_result.csv
-        - <system_name_2>_result.csv
-        - <system_name_3>_result.csv
+    - /teams_result
+        - \<system\_name\_1\>\_result.csv
+        - \<system\_name\_2\>\_result.csv
+        - \<system\_name\_3\>_result.csv
         - ...
-    - /<teams>_additional_result *`out_all==True`
-        - /<teams>_official_score.csv
-        - /<teams>_official_score_paper.csv
-        - /<teams>_section_00_auc.csv 
-        - /<teams>_section_00_score.csv
-        - /<system_name_1>
+    - /teams_additional_result *`out_all==True`
+        - /\<teams\>\_official\_score.csv
+        - /\<teams\>\_official\_score\_paper.csv
+        - /\<teams\>\_section\_00\_auc.csv
+        - /\<teams\>\_section\_00\_score.csv
+        - /\<system\_name\_1\>
             - official_score.csv
-            - <system_name_1>_bandsaw_section_00_anm_score.png
+            - \<system\_name\_1\>\_bandsaw\_section\_00\_anm\_score.png
             - ...
-            - <system_name_1>_Vacuum_section_00_anm_score.png
-        - /<system_name_2>
-            - official_score.csv
-            - <system_name_2>_bandsaw_section_00_anm_score.png
+            - \<system\_name\_1\>\_Vacuum\_section\_00\_anm\_score.png
+        - /\<system\_name\_2\>
+            - official\_score.csv
+            - \<system\_name\_2\>\_bandsaw\_section\_00\_anm\_score.png
             - ...
-            - <system_name_2>_Vacuum_section_00_anm_score.png
-        - /<system_name_3>
-            - official_score.csv
-            - <system_name_3>_bandsaw_section_00_anm_score.png
+            - \<system\_name\_2\>\_Vacuum\_section\_00\_anm\_score.png
+        - /\<system\_name\_3\>
+            - official\_score.csv
+            - \<system\_name\_3\>\_bandsaw\_section\_00\_anm\_score.png
             - ...
-            - <system_name_3>_Vacuum_section_00_anm_score.png
+            - \<system\_name\_3\>\_Vacuum\_section\_00\_anm\_score.png
         - ...
     - tools
-        - plot_anm_score.py
-        - test_plots.py
+        - plot\_anm\_score.py
+        - test\_plots.py
     - /README.md
 
 
@@ -99,13 +99,13 @@ Clone this repository from Github.
 The parameters are defined in the script `dcase2023_task2_evaluator.py` as follows.
 - **MAX_FPR**
     - The FPR threshold for pAUC : default 0.1
-- **--result_dir**
+- **--result\_dir**
     - The output directory : default `./teams_result/`
-- **--teams_root_dir**
+- **--teams\_root\_dir**
     - Directory containing team results. : default `./teams/`
-- **--dir_depth**
+- **--dir\_depth**
     - What depth to search '--teams_root_dir' using glob. : default `2`
-    - If --dir_depth=2, then 'glob.glob(<teams_root_dir>/*/*)'
+    - If --dir\_depth=2, then 'glob.glob(<teams_root_dir>/*/*)'
 - **--tag**
     - File name tag. : default `_id(0_)`
     - If using filename is DCASE2023 baseline style, change parameters as necessary. 
@@ -114,7 +114,7 @@ The parameters are defined in the script `dcase2023_task2_evaluator.py` as follo
     - If using filename is DCASE2023 baseline style, change parameters as necessary.
 - **--out_all**
     - If this parameter is `True`, export supplemental data. : default `False`
-- **--additional_result_dir**
+- **--additional\_result\_dir**
     - The output additional results directory. : default `./teams_additional_result/`
     - Used when `--out_all==True`.
 
@@ -127,11 +127,11 @@ or
 ```
 $ bash 03_evaluation_eval_data.sh
 ```
-The script `dcase2023_task2_evaluator.py` calculates the AUC, pAUC, precision, recall, and F1 scores for each machine type, section, and domain and output the calculated scores into the csv files (`<system_name_1>_result.csv`, `<system_name_2>_result.csv`, ...) in **--result_dir** (default: `./teams_result/`).
-If **--out_all=True**, each team results are then aggregated into a csv file (`teams_official_score.csv`, `teams_official_score_paper.csv`) in **--additional_result_dir** (default: `./teams_additional_result`).
+The script `dcase2023_task2_evaluator.py` calculates the AUC, pAUC, precision, recall, and F1 scores for each machine type, section, and domain and output the calculated scores into the csv files (`<system_name_1>_result.csv`, `<system_name_2>_result.csv`, ...) in **--result\_dir** (default: `./teams_result/`).
+If **--out\_all=True**, each team results are then aggregated into a csv file (`teams_official_score.csv`, `teams_official_score_paper.csv`) in **--additional\_result\_dir** (default: `./teams_additional_result`).
 
 ### 6. Check results
-You can check the AUC, pAUC, precision, recall, and F1 scores in the `<system_name_N>_result.csv` in **--result_dir**.
+You can check the AUC, pAUC, precision, recall, and F1 scores in the `<system_name_N>_result.csv` in **--result\_dir**.
 The AUC, pAUC, precision, recall, and F1 scores for each machine type, section, and domain are listed as follows:
 
 `<section_name_N>_result.csv`
