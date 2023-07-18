@@ -60,21 +60,21 @@ Clone this repository from Github.
                 - anomaly\_score\_bandsaw\_section\_00\_test.csv
                 - anomaly\_score\_grinder\_section\_00\test.csv
                 - ...
-                - decision_result_ToyTank_section_00_test.csv
-                - decision_result_Vacuum_section_00_test.csv
+                - decision\_result\_ToyTank\_section\_00\_test.csv
+                - decision\_result\_Vacuum\_section\_00\_test.csv
         - ...
-    - /teams_result
+    - /teams\_result
         - \<system\_name\_1\>\_result.csv
         - \<system\_name\_2\>\_result.csv
         - \<system\_name\_3\>_result.csv
         - ...
-    - /teams_additional_result *`out_all==True`
-        - /\<teams\>\_official\_score.csv
-        - /\<teams\>\_official\_score\_paper.csv
-        - /\<teams\>\_section\_00\_auc.csv
-        - /\<teams\>\_section\_00\_score.csv
+    - /teams\_additional\_result \*`out_all==True`
+        - teams\_official\_score.csv
+        - teams\_official\_score\_paper.csv
+        - teams\_section\_00\_auc.csv
+        - teams\_section\_00\_score.csv
         - /\<system\_name\_1\>
-            - official_score.csv
+            - official\_score.csv
             - \<system\_name\_1\>\_bandsaw\_section\_00\_anm\_score.png
             - ...
             - \<system\_name\_1\>\_Vacuum\_section\_00\_anm\_score.png
@@ -89,7 +89,7 @@ Clone this repository from Github.
             - ...
             - \<system\_name\_3\>\_Vacuum\_section\_00\_anm\_score.png
         - ...
-    - tools
+    - /tools
         - plot\_anm\_score.py
         - test\_plots.py
     - /README.md
@@ -97,7 +97,7 @@ Clone this repository from Github.
 
 ### 4. Change parameters
 The parameters are defined in the script `dcase2023_task2_evaluator.py` as follows.
-- **MAX_FPR**
+- **MAX\_FPR**
     - The FPR threshold for pAUC : default 0.1
 - **--result\_dir**
     - The output directory : default `./teams_result/`
@@ -105,14 +105,14 @@ The parameters are defined in the script `dcase2023_task2_evaluator.py` as follo
     - Directory containing team results. : default `./teams/`
 - **--dir\_depth**
     - What depth to search '--teams_root_dir' using glob. : default `2`
-    - If --dir\_depth=2, then 'glob.glob(<teams_root_dir>/*/*)'
+    - If --dir\_depth=2, then `glob.glob(<teams_root_dir>/*/*)`
 - **--tag**
     - File name tag. : default `_id(0_)`
     - If using filename is DCASE2023 baseline style, change parameters as necessary. 
 - **--seed**
     - Seed used during train. : default `13711`
     - If using filename is DCASE2023 baseline style, change parameters as necessary.
-- **--out_all**
+- **--out\_all**
     - If this parameter is `True`, export supplemental data. : default `False`
 - **--additional\_result\_dir**
     - The output additional results directory. : default `./teams_additional_result/`
