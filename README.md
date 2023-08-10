@@ -104,7 +104,7 @@ The parameters are defined in the script `dcase2023_task2_evaluator.py` as follo
 - **--teams\_root\_dir**
     - Directory containing team results. : default `./teams/`
 - **--dir\_depth**
-    - What depth to search '--teams_root_dir' using glob. : default `2`
+    - What depth to search `--teams_root_dir` using glob. : default `2`
     - If --dir\_depth=2, then `glob.glob(<teams_root_dir>/*/*)`
 - **--tag**
     - File name tag. : default `_id(0_)`
